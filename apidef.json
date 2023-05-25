@@ -5,5 +5,5 @@
         "version": "1.0.0",
         "description": "Descripción de la API esta en el archivo de README.MD"},
     "tags": [{"name": "obras", "description": "Catalogo de obras de Teatro"}],
-    "servers": [{"url": "http://localhost:8082"}]
+    "servers": [{"url": "apiteatro-production.up.railway.app"}]
 }
