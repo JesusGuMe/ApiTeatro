@@ -8,11 +8,11 @@ const { SwaggerTheme } = require('swagger-themes');
 const path = require('path');
 const fs = require('fs')
 const redoc = require('redoc-express');
-require('dotenv').config()
-
 app.use(express.json())
 app.use(express.text())
 app.use(cors())
+
+require('dotenv').config()
 
 const port = process.env.PORT || 8082;
 const dbConfig = {
