@@ -30,11 +30,10 @@ const themeoptions = {
     customCss: theme.getBuffer('outline')
 };
 
-let contenidoReadme = fs.readFileSync('./README.md', { encoding: 'utf-8', flag: 'r' });
-
-let apidef_string = fs.readFileSync('./apidef.json', {encoding:'utf-8', flag: 'r'});
-let apidef_objeto = JSON.parse(apidef_string);
-apidef_objeto.info.description = contenidoReadme
+let ContenidoReadme = fs.readFileSync(path.join(__dirname)+'/README.md',{encoding:'utf8',flag:'r'})
+let apidef_string = fs.readFileSync(path.join(__dirname)+'/APIdef.json',{encoding:'utf8',flag:'r'})
+let apidef_objeto = JSON.parse(apidef_string)
+apidef_objeto.info.description=ContenidoReadme;
 
 let redocTheme_string = fs.readFileSync('./redocTheme.json', {encoding:'utf-8', flag: 'r'});
 let redocTheme_objeto = JSON.parse(redocTheme_string);
