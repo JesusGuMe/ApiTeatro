@@ -16,11 +16,11 @@ require('dotenv').config()
 
 const port = process.env.PORT || 8082;
 const dbConfig = {
-    host: process.env.DB_HOST || "localhost",
-    port: process.env.DB_PORT || "3306",
-    user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "api_teatro"
+    host: process.env.MYSQLHOST || "localhost",
+    port: process.env.MYSQLPORT || "3306",
+    user: process.env.MYSQLUSER || "root",
+    password: process.env.MYSQLPASSWORD || "",
+    database: process.env.MYSQLDATABASE || "api_teatro"
 };
 
 const theme = new SwaggerTheme('v3');
