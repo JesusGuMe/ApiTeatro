@@ -31,7 +31,7 @@ const themeoptions = {
 };
 
 let ContenidoReadme = fs.readFileSync(path.join(__dirname)+'/README.MD',{encoding:'utf8',flag:'r'})
-let apidef_string = fs.readFileSync(path.join(__dirname)+'/APIdef.json',{encoding:'utf8',flag:'r'})
+let apidef_string = fs.readFileSync(path.join(__dirname)+'/apidef.json',{encoding:'utf8',flag:'r'})
 let apidef_objeto = JSON.parse(apidef_string)
 apidef_objeto.info.description=ContenidoReadme;
 
@@ -40,7 +40,7 @@ let redocTheme_objeto = JSON.parse(redocTheme_string);
 
 const swaggerOptions = {
     definition: apidef_objeto,
-    apis: [`${path.join("./index.js")}`],
+    apis: [`${path.join(__dirname,"./index.js")}`],
     };
 
 /**
