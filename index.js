@@ -30,17 +30,18 @@ const themeoptions = {
     customCss: theme.getBuffer('outline')
 };
 
-let contenidoReadme = fs.readFileSync(path.join(__dirname)+ '/README.md', {encoding:'utf-8', flag: 'r'});
-let apidef_string = fs.readFileSync(path.join(__dirname)+ '/apidef.json', {encoding:'utf-8', flag: 'r'});
+let contenidoReadme = fs.readFileSync('./README.md', { encoding: 'utf-8', flag: 'r' });
+
+let apidef_string = fs.readFileSync('./apidef.json', {encoding:'utf-8', flag: 'r'});
 let apidef_objeto = JSON.parse(apidef_string);
 apidef_objeto.info.description = contenidoReadme
 
-let redocTheme_string = fs.readFileSync(path.join(__dirname)+ '/redocTheme.json', {encoding:'utf-8', flag: 'r'});
+let redocTheme_string = fs.readFileSync('./redocTheme.json', {encoding:'utf-8', flag: 'r'});
 let redocTheme_objeto = JSON.parse(redocTheme_string);
 
 const swaggerOptions = {
     definition: apidef_objeto,
-    apis: [`${path.join(__dirname,"./index.js")}`],
+    apis: [`${path.join("./index.js")}`],
     };
 
 /**
@@ -236,7 +237,7 @@ app.use((req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("Servidor Express corriendo y escuchando en el puerto 8082")
+    console.log(`Servidor Express corriendo y escuchando en el puerto ${port}`);
 })
 
 /**
