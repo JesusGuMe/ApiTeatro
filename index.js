@@ -30,7 +30,7 @@ const themeoptions = {
     customCss: theme.getBuffer('outline')
 };
 
-let ContenidoReadme = fs.readFileSync(path.join(__dirname)+'/README.md',{encoding:'utf8',flag:'r'})
+let ContenidoReadme = fs.readFileSync(path.join(__dirname)+'/README.MD',{encoding:'utf8',flag:'r'})
 let apidef_string = fs.readFileSync(path.join(__dirname)+'/APIdef.json',{encoding:'utf8',flag:'r'})
 let apidef_objeto = JSON.parse(apidef_string)
 apidef_objeto.info.description=ContenidoReadme;
